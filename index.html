@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="./img/calculator.ico" />
+    <script type="module" src="./dist/index.js" defer></script>
+  </head>
+
+  <body>
+    <section id="calc-main-container">
+      <div class="calc-header">
+        <h1>Calculadora</h1>
+      </div>
+
+      <form class="calc-form">
+        <div class="calc-input">
+          <label for="n1">Primeiro número:</label>
+          <input type="number" id="n1" required/>
+        </div>
+
+        <div class="calc-input">
+          <label for="n2">Segundo número:</label>
+          <input type="number" id="n2" required/>
+        </div>
+
+        <div class="calc-input">
+          <label for="operator">Operação</label>
+          <select id="operator">
+            <option value="0">Selecionar</option>
+            <option value="+">Adição</option>
+            <option value="-">Subtração</option>
+            <option value="x">Multiplicação</option>
+            <option value="/">Divisão</option>
+          </select>
+        </div>
+
+        <div class="calc-input">
+          <input type="button" id="btn-calc" value="Calcular"/>
+        </div>
+
+        <div id="calc-result">
+          <h3>Resultado</h3>
+          <p id="result"></p>
+        </div>
+      </form>
+    </section>
+
+    <section id="calc-historic-container">
+      <div class="calc-header">
+        <h1>Histórico</h1>
+      </div>
+
+      <div id="historic" class="calc-calcs"></div>
+    </section>
+  </body>
+</html>
